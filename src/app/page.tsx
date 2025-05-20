@@ -1,15 +1,11 @@
 import "server-only";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "CV",
-  robots: {index: false, follow: false}
-};
+import { PersonalInformation } from "@/components/PeronalInformation";
 
-export default function Home() {
+export default function () {
   return (
     <>
-      CV
+      <PersonalInformation />
     </>
   );
 }
