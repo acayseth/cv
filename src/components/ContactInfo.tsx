@@ -25,10 +25,10 @@ export const ContactInfo: FC = () => {
         className="flex justify-start items-center gap-2 mb-2"
         onMouseEnter={() => setIsEmailVisible(true)}
         onMouseLeave={() => setIsEmailVisible(false)}
-        onClick={() => setIsEmailVisible(isEmailVisible)}
       >
         <MdOutlineMailOutline className="w-6 h-6 text-gray-600" />
         <a
+          onClick={() => setIsEmailVisible(!isEmailVisible)}
           href={hrefData("mailto:gorbulea.s@gmail.com", isEmailVisible)}
           rel="nofollow"
           className={cn("hover:underline text-gray-600", {
@@ -45,10 +45,10 @@ export const ContactInfo: FC = () => {
         className="flex justify-start items-center gap-2 mb-2"
         onMouseEnter={() => setIsPhoneVisible(true)}
         onMouseLeave={() => setIsPhoneVisible(false)}
-        onClick={() => setIsPhoneVisible(isPhoneVisible)}
       >
         <MdOutlinePhoneIphone className="w-6 h-6 text-gray-600" />
         <a
+          onClick={() => setIsPhoneVisible(!isPhoneVisible)}
           href={hrefData("tel:37368167524", isPhoneVisible)}
           rel="nofollow"
           className={cn("hover:underline text-gray-600", {
