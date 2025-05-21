@@ -19,15 +19,15 @@ export const Hobby: FC = () => {
       <li>Next.js,</li>
       <li>Nest.js,</li>
       <li>Tailwindcss,</li>
-      <li>API,</li>
+      <li>REST-FULL API,</li>
       <li>GIT,</li>
       <li>Linux,</li>
       <li>BASH,</li>
       <li>CI/CD,</li>
       <li>Jenkins,</li>
-      <li>3D Modelatre,</li>
-      <li>Robotica,</li>
-      <li>Microelectronică</li>
+      <li>3D Modelare,</li>
+      <li>Microelectronică / Robotica,</li>
+      <li>MetaBase</li>
     </ul>
   );
 };
