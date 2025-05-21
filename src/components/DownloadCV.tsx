@@ -14,7 +14,7 @@ interface Props {
 }
 
 export const DownloadCV: FC<Readonly<Props>> = ({ className }) => {
-  const file = "/gorbulea-serghei-cv.pdf";
+  const file = "/gorbulea-serghei-cv-2025-v3.pdf";
 
   const { error, isLoading, data, mutate } = useSWR(
     file,
