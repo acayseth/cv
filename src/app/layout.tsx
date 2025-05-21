@@ -18,14 +18,8 @@ interface Props {
 const RootLayout: FC<Props> = ({ children }) => {
   return (
     <html lang="ro" suppressHydrationWarning>
-      <body
-        className={cn(
-          "antialiased mx-auto max-w-7xl p-8",
-          fontSans.variable,
-          fontMono.variable,
-        )}
-      >
-        {children}
+      <body className={cn("antialiased", fontSans.variable, fontMono.variable)}>
+        <main className="mx-auto max-w-7xl p-8">{children}</main>
       </body>
     </html>
   );

@@ -10,16 +10,17 @@ import { RxReload } from "@/components/icons/loading.icon";
 import { RiDownloadCloud2Fill } from "@/components/icons/download.icon";
 
 interface Props {
-  file: `/${string}`;
   className?: string | undefined;
 }
 
-export const DownloadCV: FC<Readonly<Props>> = ({ className, file }) => {
+export const DownloadCV: FC<Readonly<Props>> = ({ className }) => {
+  const file = "/gorbulea-serghei-cv.pdf";
+
   const { error, isLoading, data, mutate } = useSWR(
     file,
-    (url) =>
+    (url: string) =>
       axiosInstance
-        .get("/sample.pdf", {
+        .get(url, {
           responseType: "blob",
         })
         .then((data: any) => {
@@ -50,7 +51,7 @@ export const DownloadCV: FC<Readonly<Props>> = ({ className, file }) => {
       {!isLoading && (
         <>
           <RiDownloadCloud2Fill className="w-5 h-5 mr-2" />
-          Descarcă
+          Descarcă CV
         </>
       )}
       {isLoading && <RxReload className="w-5 h-5 animate-spin" />}
